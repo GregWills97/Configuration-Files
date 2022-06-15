@@ -12,7 +12,7 @@ set previewer '~/.config/lf/scope'
 cmd open ${{
     case $(file --mime-type "$(readlink -f $f)" -b) in
 	application/pdf) setsid -f zathura $fx >/dev/null 2>&1 ;;
-    text/*) $EDITOR $fx ;;
+    text/*|inode/x-empty) $EDITOR $fx ;;
 	image/*) setsid -f sxiv $fx >/dev/null 2>&1 ;;
 	audio/*) mpv --audio-display=no $f ;;
 	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
