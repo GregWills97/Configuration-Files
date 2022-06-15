@@ -20,8 +20,6 @@ cmd open ${{
     esac
 }}
 
-cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
-
 cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -39,12 +37,21 @@ cmd delete ${{
 	[ $ans = "y" ] && rm -rf -- $fx
 }}
 
+cmd setbg ${{
+    type=$(file --mime-type "$(readlink -f $f)" -b)
+    if [ "$type" = "image/jpeg" ]; then
+        sed -i '2 c\file='$f'' ~/.config/nitrogen/bg-saved.cfg
+        sed -i '7 c\file='$f'' ~/.config/nitrogen/bg-saved.cfg
+        nitrogen --restore
+    fi
+}}
 
 # Bindings
 map g top
 map G bottom
 map D delete
 map E extract
+map B setbg
 map <c-s> set hidden!
 map <c-r> reload
 map <enter> shell
