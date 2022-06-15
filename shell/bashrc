@@ -1,1 +1,100 @@
-/home/greg/.bashrc
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+# LF Stuff
+LFCD="/usr/share/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
+
+# This is the list for lf icons:
+export LF_ICONS="di=:\
+fi=:\
+tw=:\
+ow=:\
+ln=:\
+or=❌:\
+ex=:\
+*.txt=:\
+*.png=:\
+*.jpg=:\
+*.jpeg=:\
+*.gif=:\
+*.svg=:\
+*.xcf=:\
+*.html=:\
+*.xml=:\
+*.h=:\
+*.c=:\
+*.gch=:\
+*.cpp=:\
+*.py=:\
+*.go=:\
+*.java=:\
+*.gpg=:\
+*.css=:\
+*.pdf=:\
+*.csv=:\
+*.xlsx=:\
+*.tex=📜:\
+*.md=:\
+*.mp3=:\
+*.m4a=:\
+*.wav=:\
+*.mkv=:\
+*.mp4=:\
+*.webm=:\
+*.mpeg=:\
+*.avi=:\
+*.mov=:\
+*.mpg=:\
+*.wmv=:\
+*.m4b=:\
+*.flv=:\
+*.zip=:\
+*.rar=:\
+*.7z=:\
+*.tar.gz=:\
+*.1=:\
+*.nfo=:\
+*.info=:\
+*.log=:\
+*.iso=📀:\
+*.img=📀:\
+*.bib=🎓:\
+*.jar=♨:\
+"
+
+# Alias
+set -o vi
+alias sudo='doas'
+alias fix-time='sudo rc-service ntp-client start'
+alias vim='nvim'
+alias mutt='neomutt'
+alias ll='exa'
+alias ls='exa -al'
+alias gentoo-update='sudo eix-sync && sudo emerge -auvDN --with-bdeps=y @world && sudo emerge -ac && sudo eclean-dist -d'
+alias connect-mac='ssh gentoo-mac'
+alias connect-rpi='ssh pi@rpi-pihole'
+alias connect-embedded-vm='ssh gregory@192.168.122.122'
+alias vpn-connect='sudo openvpn /home/greg/.vpn/greg-desktop.ovpn'
+alias youtube-dl='youtube-dl --restrict-filenames'
+alias lf='/etc/dwm-greg/lf-wrapper'
+
+neofetch
+
+export PATH=${PATH}:/home/greg/.scripts:/opt/cisco/anyconnect/bin:
+export EDITOR="/usr/bin/nvim"

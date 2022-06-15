@@ -1,1 +1,42 @@
-/home/greg/.Xresources
+st.alpha: 0.85
+st.font: Monospace-15;
+
+! special
+*.foreground:   #F8F8F2
+*.background:   #272822
+*.cursorColor:  #E65E00
+
+! black
+*.color0:       #1B2229
+*.color8:       #1B2229
+
+! red
+*.color1:       #E74C3C
+*.color9:       #E74C3C
+
+! green
+*.color2:       #A6E22E
+*.color10:      #A6E22E
+
+! yellow
+*.color3:       #E6DB74
+*.color11:      #E6DB74
+
+! blue
+*.color4:       #268BD2
+*.color12:      #268BD2
+
+! orange
+*.color5:       #E65E00
+*.color13:      #E65E00
+
+! cyan
+*.color6:       #66D9EF
+*.color14:      #66D9EF
+
+! white
+*.color7:       #556172
+*.color15:      #4D4D4D
+
+
+
