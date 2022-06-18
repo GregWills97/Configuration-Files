@@ -1,0 +1,48 @@
+#Needed by libreoffice
+app-office/libreoffice dbus -bluetooth
+#Needed by pulse
+media-sound/pulseaudio dbus
+#Needed by QEMU
+app-emulation/qemu usbredir vhost-net spice virtfs usb static-user static-libs
+#Needed by Emacs
+app-editors/emacs gui
+#For Fontawesome
+media-fonts/fontawesome ttf
+#For Slack
+net-im/slack suid
+#For PCSX2
+games-emulation/pcsx2 filecaps
+#For doas
+app-admin/doas persist
+#For zlib
+sys-libs/zlib minizip
+#For Latex
+app-text/texlive science publishers graphics humanities extra luatex xetex
+#For GNU/Octave
+sci-mathematics/octave curl fftw glpk gui java opengl qhull qrupdate readline sparse zlib postscript
+dev-qt/qtwidgets dbus
+dev-qt/qtgui dbus
+#For sxiv
+media-gfx/sxiv gif
+#For my dwm
+x11-wm/dwm savedconfig
+x11-misc/dmenu savedconfig
+x11-misc/st savedconfig
+#For opencv 
+media-libs/opencv contrib eigen features2d gtk3 jpeg jpeg2k python png threads tiff 
+#for nvidia
+x11-drivers/nvidia-drivers abi_x86_32
+#for zathura
+app-text/zathura doc magic
+app-text/zathura-meta postscript
+#Mutt
+mail-client/neomutt sasl 
+#Nerd fonts
+media-fonts/nerd-fonts codenewroman dejavusansmono droidsansmono firacode firamono hack hermit inconsolata jetbrainsmono liberationmono monoid mononoki noto ubuntu ubuntumono 
+#MESA
+media-libs/vulkan-layers abi_x86_32
+media-libs/vulkan-loader abi_x86_32
+#XFCE
+xfce-base/xfce4-meta minimal
+#OBS
+media-video/obs-studio lua nvenc speex pulseaudio v4l
