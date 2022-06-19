@@ -70,3 +70,4 @@ ex=:\
 *.jar=♨:\
 "
 
+export PATH=$PATH:/etc/gde
