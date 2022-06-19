@@ -90,7 +90,7 @@ alias gentoo-update='sudo eix-sync && sudo emerge -auvDN --with-bdeps=y @world &
 alias connect-mac='ssh gentoo-mac'
 alias connect-rpi='ssh pi@rpi-pihole'
 alias connect-embedded-vm='ssh gregory@192.168.122.122'
-alias lf='/etc/dwm-greg/lf-wrapper'
+alias lf='/etc/gde/lf-wrapper'
 
 neofetch
 
