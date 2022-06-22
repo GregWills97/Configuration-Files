@@ -14,69 +14,6 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
-# LF Stuff
-LFCD="/usr/share/lf/lfcd.sh"
-if [ -f "$LFCD" ]; then
-    source "$LFCD"
-fi
-
-# This is the list for lf icons:
-export LF_ICONS="di=:\
-fi=:\
-tw=:\
-ow=:\
-ln=:\
-or=❌:\
-ex=:\
-*.txt=:\
-*.png=:\
-*.jpg=:\
-*.jpeg=:\
-*.gif=:\
-*.svg=:\
-*.xcf=:\
-*.html=:\
-*.xml=:\
-*.h=:\
-*.c=:\
-*.gch=:\
-*.cpp=:\
-*.py=:\
-*.go=:\
-*.java=:\
-*.gpg=:\
-*.css=:\
-*.pdf=:\
-*.csv=:\
-*.xlsx=:\
-*.tex=📜:\
-*.md=:\
-*.mp3=:\
-*.m4a=:\
-*.wav=:\
-*.mkv=:\
-*.mp4=:\
-*.webm=:\
-*.mpeg=:\
-*.avi=:\
-*.mov=:\
-*.mpg=:\
-*.wmv=:\
-*.m4b=:\
-*.flv=:\
-*.zip=:\
-*.rar=:\
-*.7z=:\
-*.tar.gz=:\
-*.1=:\
-*.nfo=:\
-*.info=:\
-*.log=:\
-*.iso=📀:\
-*.img=📀:\
-*.bib=🎓:\
-*.jar=♨:\
-"
 
 # Alias
 set -o vi
