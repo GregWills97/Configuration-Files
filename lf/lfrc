@@ -41,7 +41,6 @@ cmd setbg ${{
     type=$(file --mime-type "$(readlink -f $f)" -b)
     if [ "$type" = "image/jpeg" ]; then
         sed -i '2 c\file='$f'' ~/.config/nitrogen/bg-saved.cfg
-        sed -i '7 c\file='$f'' ~/.config/nitrogen/bg-saved.cfg
         nitrogen --restore
     fi
 }}
